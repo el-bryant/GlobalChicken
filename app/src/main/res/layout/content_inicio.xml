@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blanco"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@mipmap/logo_chasky"
+                android:layout_margin="20dp"
+                android:contentDescription="@string/app_name"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrarme como cliente"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:layout_marginLeft="50sp"
+                android:layout_marginRight="50sp"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="7sp"
+                android:background="@drawable/boton1"
+                android:textColor="@color/blanco"
+                android:textStyle="bold"
+                android:onClick="onRegistro"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Realizar pedido"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:layout_marginLeft="50sp"
+                android:layout_marginRight="50sp"
+                android:layout_marginTop="8sp"
+                android:layout_marginBottom="7sp"
+                android:background="@drawable/boton2"
+                android:textColor="@color/morado"
+                android:textStyle="bold"
+                android:onClick="onPedido"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Llamar"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:layout_marginLeft="50sp"
+                android:layout_marginRight="50sp"
+                android:layout_marginTop="8sp"
+                android:layout_marginBottom="7sp"
+                android:background="@drawable/boton3"
+                android:textColor="@color/blanco"
+                android:textStyle="bold"
+                android:onClick="onLlamar"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recuerda que para realizar un pedido delivery debes estar registrado como cliente"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:background="@color/morado"
+                android:textColor="@color/amarillo"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:onClick="onNosotros"/>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/facebook"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="onFacebook"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

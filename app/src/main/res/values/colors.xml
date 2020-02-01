@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#514E9B</color>
+    <color name="colorPrimaryDark">#FCD01C</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="morado">#514E9B</color>
+    <color name="amarillo">#FCD01C</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="rojo">#FF3440</color>
+    <color name="verde">#00D533</color>
+</resources>

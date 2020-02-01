@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Confirmar"
+    tools:showIn="@layout/app_bar_confirmar">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvIdProductoConfirmar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verifique su información por favor y pulse Confirmar"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/morado"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tvDniClienteConfirmar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="DNI"
+                    android:layout_margin="8dp"
+                    android:enabled="true"
+                    android:layout_weight="0.4"
+                    android:textAlignment="center"
+                    android:maxLength="8"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColorHint="@color/morado"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="Cargar mis datos"
+                    android:textAllCaps="false"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/boton1"
+                    android:textColor="@color/blanco"
+                    android:textSize="15sp"
+                    android:onClick="onCargarDatos"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tvApellidoPaternoClienteConfirmar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Apellido Paterno"
+                    android:layout_margin="8dp"
+                    android:enabled="false"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:singleLine="true"
+                    android:textColorHint="@color/morado"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tvApellidoMaternoClienteConfirmar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Apellido Materno"
+                    android:layout_margin="8dp"
+                    android:enabled="false"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:singleLine="true"
+                    android:textColorHint="@color/morado"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tvNombresClienteConfirmar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombres"
+                    android:layout_margin="8dp"
+                    android:enabled="false"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:singleLine="true"
+                    android:textColorHint="@color/morado"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tvCelularClienteConfirmar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Celular"
+                    android:layout_margin="8dp"
+                    android:enabled="false"
+                    android:textAlignment="center"
+                    android:maxLength="9"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textColorHint="@color/morado"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Producto pedido:"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/morado"/>
+
+            <TextView
+                android:id="@+id/tvProductoConfirmar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del producto"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingrese la cantidad:"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/morado"
+                    android:layout_weight="0.5"/>
+
+                <EditText
+                    android:id="@+id/etCantidadConfirmar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:hint="Cantidad"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:layout_margin="10dp" />
+
+                <!--Spinner
+                    android:id="@+id/spnCantidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:entries="1;2;3;4"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"/-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingrese la dirección de entrega:"
+                    android:layout_margin="10dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/morado"
+                    android:layout_weight="5"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:text="Ubicarme"
+                    android:background="@drawable/boton3"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blanco"
+                    android:textSize="15sp"
+                    android:onClick="onMaps"/>
+
+            </LinearLayout>
+
+            <AutoCompleteTextView
+                android:id="@+id/tvUbicacionClienteConirmar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                android:layout_margin="10dp"
+                android:hint="Dirección"
+                android:singleLine="true"
+                android:enabled="false"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirmar pedido"
+                android:background="@drawable/boton2"
+                android:textColor="@color/morado"
+                android:textSize="18sp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="50dp"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:onClick="Confirmar"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
